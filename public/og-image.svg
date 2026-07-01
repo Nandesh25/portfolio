@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0a0a0a" />
+      <stop offset="1" stop-color="#0e1a1d" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#22d3ee" />
+      <stop offset="1" stop-color="#0891b2" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)" />
+  <circle cx="1050" cy="120" r="220" fill="#22d3ee" opacity="0.12" />
+  <circle cx="150" cy="540" r="180" fill="#0891b2" opacity="0.12" />
+  <text x="90" y="300" font-family="Inter, system-ui, sans-serif" font-size="76" font-weight="900" fill="#ffffff">
+    Nandesh Murali
+  </text>
+  <text x="92" y="370" font-family="Inter, system-ui, sans-serif" font-size="40" font-weight="600" fill="url(#accent)">
+    Software Engineer / AI Engineer
+  </text>
+  <text x="92" y="440" font-family="Inter, system-ui, sans-serif" font-size="26" font-weight="400" fill="#94a3b8">
+    Angular · TypeScript · Python · FastAPI · AI-Powered Applications
+  </text>
+</svg>
