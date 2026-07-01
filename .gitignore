@@ -15,6 +15,11 @@ dist-ssr
 .idea
 .DS_Store
 
+# TypeScript build artifacts / info
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
+
 # Env
 .env
 .env.*
