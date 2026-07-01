@@ -44,7 +44,7 @@ export const profile: Profile = {
   email: 'nandeshcoc3@gmail.com',
   phone: '+91 7200354665',
   github: 'https://github.com/Nandesh25',
-  linkedin: '#',
+  linkedin: 'https://www.linkedin.com/in/nandesh-murali-63824a319',
   resumeUrl: '/Nandesh_Murali_Resume.pdf',
   availability: 'Open to Software / AI Engineering roles',
 };
