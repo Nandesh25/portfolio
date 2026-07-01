@@ -3,7 +3,10 @@ import react from '@vitejs/plugin-react';
 import { fileURLToPath, URL } from 'node:url';
 
 // https://vitejs.dev/config/
-export default defineConfig({
+export default defineConfig(({ command }) => ({
+  // Served from https://<user>.github.io/portfolio/ on GitHub Pages (project site).
+  // Keep the dev server at root ('/') for local development.
+  base: command === 'build' ? '/portfolio/' : '/',
   plugins: [react()],
   resolve: {
     alias: {
@@ -22,4 +25,4 @@ export default defineConfig({
       },
     },
   },
-});
+}));

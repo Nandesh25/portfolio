@@ -45,7 +45,7 @@ export const profile: Profile = {
   phone: '+91 7200354665',
   github: 'https://github.com/Nandesh25',
   linkedin: 'https://www.linkedin.com/in/nandesh-murali-63824a319',
-  resumeUrl: '/Nandesh_Murali_Resume.pdf',
+  resumeUrl: `${import.meta.env.BASE_URL}Nandesh_Murali_Resume.pdf`,
   availability: 'Open to Software / AI Engineering roles',
 };
 
