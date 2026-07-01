@@ -19,17 +19,20 @@ npm run build    # type-check + production build to /dist
 npm run preview  # preview the production build
 ```
 
-## Add Your Resume PDF
+> For detailed installation, customization, deployment and troubleshooting
+> steps, see the **[Setup Guide](SETUP.md)**.
 
-The Resume section and all "Download Resume" buttons point to `/Nandesh_Murali_Resume.pdf`.
+## Resume PDF
 
-1. Copy your resume PDF into the `public/` folder.
-2. Rename it to `Nandesh_Murali_Resume.pdf`.
-3. (Optional) change the path in `src/data/portfolio.ts` → `profile.resumeUrl`.
+The Resume section and all "Download Resume" buttons point to `/Nandesh_Murali_Resume.pdf`,
+which is served as a static file from `public/`. The PDF is already included.
+
+To replace it, drop a new PDF into `public/` named `Nandesh_Murali_Resume.pdf`
+(or update the path in `src/data/portfolio.ts` → `profile.resumeUrl`).
 
 ## Update Your Links (LinkedIn / GitHub)
 
-These weren't in the resume, so they use `#` placeholders. Update them in one place:
+The GitHub and LinkedIn links are configured in one place. Update them anytime:
 
 - `src/data/portfolio.ts` → `profile.github`, `profile.linkedin`
 - Per-project repo/demo links: `projects[].github`, `projects[].demo`
