@@ -43,7 +43,7 @@ export const profile: Profile = {
     'Software Engineering Intern with experience in Angular, TypeScript, Python, REST API integration, and AI-powered applications — passionate about frontend development, automation, and enterprise application modernization.',
   email: 'nandeshcoc3@gmail.com',
   phone: '+91 7200354665',
-  github: '#',
+  github: 'https://github.com/Nandesh25',
   linkedin: '#',
   resumeUrl: '/Nandesh_Murali_Resume.pdf',
   availability: 'Open to Software / AI Engineering roles',
