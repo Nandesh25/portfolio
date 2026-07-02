@@ -40,7 +40,7 @@ export const profile: Profile = {
   title: 'Software Engineer / AI Engineer',
   tagline: 'Building modern, AI-powered applications.',
   intro:
-    'Software Engineering Intern with experience in Angular, TypeScript, Python, REST API integration, and AI-powered applications — passionate about frontend development, automation, and enterprise application modernization.',
+    'Software Engineering Intern with hands-on experience in enterprise application development, frontend engineering, backend integration, Quality Engineering, and AI-powered software solutions. Experienced in Angular, TypeScript, Python, FastAPI, REST APIs, Playwright, and Azure DevOps. Contributed to Angular framework migration, developed enterprise AI features, built reusable automation frameworks, authored comprehensive QE test suites, and supported CI/CD deployments across multiple environments. Passionate about building scalable software and Generative AI applications.',
   email: 'nandeshcoc3@gmail.com',
   phone: '+91 7200354665',
   github: 'https://github.com/Nandesh25',
@@ -70,11 +70,11 @@ export const navItems: NavItem[] = [
 
 export const about: AboutContent = {
   summary:
-    'Software Engineering Intern with experience in Angular, TypeScript, Python, REST API integration, and AI-powered applications. Skilled in frontend development, automation, testing, enterprise application modernization, and CI/CD workflows.',
+    'Software Engineering Intern with hands-on experience in enterprise application development, frontend engineering, backend integration, Quality Engineering, and AI-powered software solutions. Experienced in Angular, TypeScript, Python, FastAPI, REST APIs, Playwright, and Azure DevOps. Contributed to Angular framework migration, developed enterprise AI features, built reusable automation frameworks, authored comprehensive QE test suites, and supported CI/CD deployments across multiple environments. Passionate about building scalable software and Generative AI applications.',
   objective:
-    'Experienced in Agile development, code reviews, unit testing, Docker image creation, deployment pipeline execution, and application deployment across multiple environments using Git-based version control.',
+    'Motivated Software Engineer with hands-on experience in enterprise application development, AI-powered solutions, frontend engineering, backend integration, and automation testing. Seeking a Software Engineer role where I can leverage my expertise in Angular, Python, FastAPI, Playwright, and Generative AI to build scalable, high-quality software solutions while continuously learning and contributing to innovative technologies.',
   highlights: [
-    { value: 'Angular 18→20', label: 'Enterprise App Migration' },
+    { value: 'Angular 18 - 22', label: 'ABB MCS Ai Assist' },
     { value: '3+', label: 'End-to-End Projects' },
     { value: '4', label: 'Professional Certifications' },
     { value: '1st', label: 'Place — CRESATHON\u201923' },
@@ -139,19 +139,35 @@ export const experiences: ExperienceItem[] = [
   {
     company: 'ABB India Ltd.',
     role: 'Software Engineering Intern',
-    duration: 'Feb 2026 – Present',
+    duration: 'Feb 2026 – July 2026',
     responsibilities: [
-      'Migrated the MCS AI Assist application from Angular 18 to Angular 20, ensuring compatibility with the latest framework features and improving maintainability.',
-      'Developed a Custom Prompt Management feature with create, edit, delete, RBAC, and personalization capabilities.',
+      'Contributed across Quality Engineering, Frontend Development, Backend Integration, Angular Migration, Deployment, and UI Automation for the enterprise MCS AI Assist application.',
+      'Raised 15+ Pull Requests covering feature development, framework migration, bug fixes, automation enhancements, deployment support, and code improvements.',
+      'Participated in migrating the MCS AI Assist application from Angular 18 to Angular 22, ensuring framework compatibility and application stability.',
+      'Developed enterprise AI features including Custom Prompt Management with RBAC, personalization, and CRUD functionality.',
       'Implemented Download Transcript functionality for exporting AI conversations.',
-      'Performed code reviews and collaborated with cross-functional teams.',
-      'Participated in Agile sprint planning and daily stand-ups.',
-      'Performed deployment verification, environment validation, and release testing across multiple instances.',
+      'Authored comprehensive QE test suites for 5 major AI Assist features, covering UI workflows, API validation, and regression scenarios.',
+      'Built reusable Playwright UI automation and Python API automation frameworks, reducing manual testing effort.',
+      'Integrated and validated FastAPI and REST APIs using Postman and Azure DevOps Test Plans.',
+      'Performed deployment verification, environment validation, Docker image verification, and release testing across multiple environments.',
+      'Collaborated in Agile Scrum teams, participated in sprint planning, code reviews, and daily stand-ups.',
     ],
-    technologies: ['Angular', 'TypeScript', 'Python', 'REST APIs', 'RBAC', 'CI/CD', 'Git'],
+    technologies: [
+      'Angular 22',
+      'TypeScript',
+      'Python',
+      'Playwright',
+      'FastAPI',
+      'REST APIs',
+      'RBAC',
+      'Postman',
+      'Azure DevOps',
+      'Docker',
+      'Git',
+    ],
     achievements: [
-      'Built a Python-based AI Response Consistency Validation framework using semantic similarity analysis.',
-      'Successfully modernized an enterprise application across two major Angular versions.',
+      'Delivered impact across engineering, quality, automation, migration, and deployment for an enterprise AI application.',
+      'Strengthened release confidence through reusable automation and end-to-end API and UI validation.',
     ],
   },
 ];
@@ -206,28 +222,28 @@ export const projects: Project[] = [
     icon: FaHelicopter,
   },
   {
-    title: 'Indoor Plant Monitoring',
+    title: 'AI Image Caption Generator',
     summary:
-      'An IoT-based plant monitoring system enabling real-time environmental monitoring and fungal-risk estimation.',
+      'A multimodal AI application using Gemini Vision to generate intelligent image descriptions and contextual captions.',
     problem:
-      'Indoor plants need continuous environmental monitoring to prevent fungal risk driven by temperature and humidity.',
+      'Generating rich, contextual image descriptions requires combining vision understanding with natural language output in a usable interface.',
     solution:
-      'Developed an IoT-based plant monitoring system using ESP32 and DHT22, enabling real-time environmental monitoring and fungal-risk estimation.',
-    technologies: ['ESP32', 'DHT22', 'ThingSpeak', 'Python'],
+      'Built a multimodal AI application using Gemini Vision and integrated image upload, AI inference, and a responsive frontend with REST API communication.',
+    technologies: ['Gemini Vision', 'Python', 'REST APIs', 'Frontend'],
     features: [
-      'Real-time environmental monitoring',
-      'Fungal-risk estimation',
-      'ESP32 + DHT22 sensor integration',
-      'Cloud data logging via ThingSpeak',
+      'Intelligent image descriptions',
+      'Scene summaries and object detection',
+      'Contextual caption generation',
+      'Image upload and AI inference workflow',
     ],
     challenges:
-      'Reliably capturing sensor data and estimating fungal risk from environmental readings in real time.',
+      'Designing reliable multimodal inference flows while maintaining responsive user experience and clear REST-based communication.',
     outcome:
-      'Enabled continuous, real-time environmental monitoring with actionable fungal-risk insights.',
+      'Delivered an end-to-end AI captioning app that turns uploaded images into high-quality, context-aware descriptions.',
     github: '#',
     demo: '#',
     accent: 'from-emerald-500/20 to-teal-500/20',
-    icon: FaLeaf,
+    icon: FaRobot,
   },
 ];
 
