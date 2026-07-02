@@ -11,7 +11,6 @@ import {
   FaTools,
   FaVial,
   FaGitAlt,
-  FaLeaf,
   FaHeartbeat,
   FaHelicopter,
 } from 'react-icons/fa';
