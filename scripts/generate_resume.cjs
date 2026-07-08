@@ -1,55 +1,71 @@
 const fs = require('fs');
 const PDFDocument = require('pdfkit');
 
-const resumeText = `Nandesh Murali
-
-Phone: +91 7200354665
-Email: nandeshcoc3@gmail.com
-LinkedIn: https://www.linkedin.com/in/nandesh-murali-63824a319
-GitHub: https://github.com/Nandesh25
-
-Professional Summary
-Software Engineering graduate with internship experience developing enterprise AI applications using Angular, TypeScript, Python, FastAPI, and REST APIs. Skilled in full-stack development, SDLC, unit testing, integration testing, CI/CD, Docker, version control, and building scalable AI-powered software solutions.
-
-Experience
-ABB India Ltd.            Feb 2026 – Jul 2026
-Software Engineering Intern          Bengaluru, India
-• Developed enterprise AI applications using Angular, TypeScript, FastAPI, and REST APIs.
-• Migrated the enterprise application from Angular 18 to Angular 22 and implemented AI-powered features.
-• Built reusable Playwright and Python automation frameworks for UI, API, unit, and integration testing.
-• Created and merged 15+ pull requests using Git, Azure DevOps, version control, and Agile software development practices.
-• Performed deployment validation, Docker image verification, CI/CD support, release testing, and SDLC activities across multiple environments.
-
-Technical Skills
-Languages: Python, TypeScript, JavaScript, SQL, C++
-Frontend: Angular, HTML, CSS, SCSS, Responsive Web Development
-Backend: FastAPI, Flask, REST APIs, JSON
-AI & Automation: Generative AI, Gemini API, Playwright, Prompt Engineering
-Testing: UI Testing, API Testing, Unit Testing, Integration Testing
-DevOps & Tools: Git, GitHub, Azure DevOps, Docker, CI/CD, Version Control
-Databases: MongoDB, MySQL
-Methodologies: Agile Scrum, Software Development Lifecycle (SDLC)
-
-Projects
-Asset Health Monitoring System | Python, Flask, Streamlit, MongoDB, REST APIs
-• Developed a predictive asset health monitoring platform using Flask, MongoDB, Streamlit, and REST APIs with real-time dashboards and equipment health classification.
-
-AI-Based Drone Detection & Tracking System | YOLOv8, OpenCV, Raspberry Pi 5, Python
-• Built an AI-powered drone detection and tracking system using YOLOv8, OpenCV, and multimodal sensor fusion for autonomous UAV monitoring and real-time alerts.
-
-VisionAI Multimodal Image Caption Generator | Gemini Vision API, FastAPI, Python, HTML, CSS, JavaScript
-• Developed a multimodal AI application using Gemini Vision API and FastAPI for image captioning, scene understanding, object detection, and AI-powered visual analysis.
-
-Education
-B. S. Abdur Rahman Crescent Institute of Science and Technology      2022 – 2026
-Bachelor of Technology (B.Tech) in Electronics and Communication Engineering
-
-Vels Vidyashram, Chennai      2021 – 2022
-Central Board of Secondary Education (CBSE) – Class XII
-
-Achievements
-First Place – CRESATHON’23 (Intra-College Hackathon) 2023
-`;
+const data = {
+  name: 'Nandesh Murali',
+  contact: {
+    phone: '+91 7200354665',
+    email: 'nandeshcoc3@gmail.com',
+    linkedin: 'https://www.linkedin.com/in/nandesh-murali-63824a319',
+    github: 'https://github.com/Nandesh25',
+  },
+  summary:
+    'Software Engineering graduate with internship experience developing enterprise AI applications using Angular, TypeScript, Python, FastAPI, and REST APIs. Skilled in full-stack development, SDLC, unit testing, integration testing, CI/CD, Docker, version control, and building scalable AI-powered software solutions.',
+  experience: [
+    {
+      employer: 'ABB India Ltd.',
+      duration: 'Feb 2026 – Jul 2026',
+      role: 'Software Engineering Intern',
+      location: 'Bengaluru, India',
+      bullets: [
+        'Developed enterprise AI applications using Angular, TypeScript, FastAPI, and REST APIs.',
+        'Migrated the enterprise application from Angular 18 to Angular 22 and implemented AI-powered features.',
+        'Built reusable Playwright and Python automation frameworks for UI, API, unit, and integration testing.',
+        'Created and merged 15+ pull requests using Git, Azure DevOps, version control, and Agile practices.',
+        'Performed deployment validation, Docker image verification, CI/CD support, release testing, and SDLC activities across multiple environments.',
+      ],
+    },
+  ],
+  skills: {
+    languages: 'Python, TypeScript, JavaScript, SQL, C++',
+    frontend: 'Angular, HTML, CSS, SCSS, Responsive Web Development',
+    backend: 'FastAPI, Flask, REST APIs, JSON',
+    ai: 'Generative AI, Gemini API, Playwright, Prompt Engineering',
+    testing: 'UI Testing, API Testing, Unit Testing, Integration Testing',
+    devops: 'Git, GitHub, Azure DevOps, Docker, CI/CD',
+    db: 'MongoDB, MySQL',
+  },
+  projects: [
+    {
+      title: 'Asset Health Monitoring System',
+      tech: 'Python, Flask, Streamlit, MongoDB, REST APIs',
+      desc: 'Predictive asset health monitoring platform with real-time dashboards and equipment health classification.',
+    },
+    {
+      title: 'AI-Based Drone Detection & Tracking System',
+      tech: 'YOLOv8, OpenCV, Raspberry Pi 5, Python',
+      desc: 'Real-time drone detection and tracking with multimodal sensor fusion and alerts.',
+    },
+    {
+      title: 'VisionAI Multimodal Image Caption Generator',
+      tech: 'Gemini Vision API, FastAPI, Python, HTML, CSS, JavaScript',
+      desc: 'Multimodal image captioning and scene understanding using Gemini Vision.',
+    },
+  ],
+  education: [
+    {
+      school: 'B. S. Abdur Rahman Crescent Institute of Science and Technology',
+      degree: 'B.Tech in Electronics and Communication Engineering',
+      years: '2022 – 2026',
+    },
+    {
+      school: 'Vels Vidyashram, Chennai',
+      degree: 'Class XII — CBSE',
+      years: '2021 – 2022',
+    },
+  ],
+  achievements: ['First Place – CRESATHON’23 (Intra-College Hackathon) 2023'],
+};
 
 // Ensure output directory exists
 const outPath = 'public/Nandesh_Murali_Resume.pdf';
@@ -58,20 +74,61 @@ const stream = fs.createWriteStream(outPath);
 
 doc.pipe(stream);
 
-// Simple formatting: Title
 doc.font('Helvetica-Bold').fontSize(18).text('Nandesh Murali', {align: 'left'});
 doc.moveDown(0.5);
-
-// Contact info
 doc.font('Helvetica').fontSize(10).text('Phone: +91 7200354665    Email: nandeshcoc3@gmail.com');
 doc.text('LinkedIn: https://www.linkedin.com/in/nandesh-murali-63824a319    GitHub: https://github.com/Nandesh25');
 doc.moveDown(0.8);
+// Header
+doc.font('Helvetica-Bold').fontSize(20).text(data.name, {align: 'left'});
+doc.moveDown(0.3);
+doc.font('Helvetica').fontSize(10).text(`${data.contact.phone}    |    ${data.contact.email}`);
+doc.text(`${data.contact.linkedin}    |    ${data.contact.github}`);
+doc.moveDown(0.6);
 
-// Body text
-const paragraphs = resumeText.split('\n\n').slice(1); // skip the first title (we already added it)
-paragraphs.forEach((p) => {
-  doc.font('Helvetica').fontSize(11).text(p, {align: 'left', lineGap: 2});
-  doc.moveDown(0.5);
+function section(title) {
+  doc.moveDown(0.2);
+  doc.font('Helvetica-Bold').fontSize(12).text(title);
+  doc.moveDown(0.1);
+}
+
+section('Professional Summary');
+doc.font('Helvetica').fontSize(11).text(data.summary, {lineGap: 3});
+
+section('Experience');
+data.experience.forEach((exp) => {
+  doc.font('Helvetica-Bold').fontSize(11).text(`${exp.role} — ${exp.employer}`, {continued: false});
+  doc.font('Helvetica').fontSize(10).text(`${exp.duration} | ${exp.location}`);
+  doc.moveDown(0.2);
+  exp.bullets.forEach((b) => {
+    doc.list([b], {bulletIndent: 10});
+  });
+});
+
+section('Technical Skills');
+Object.keys(data.skills).forEach((k) => {
+  doc.font('Helvetica-Bold').fontSize(10).text(k.charAt(0).toUpperCase() + k.slice(1) + ': ', {continued: true});
+  doc.font('Helvetica').fontSize(10).text(data.skills[k]);
+});
+
+section('Projects');
+data.projects.forEach((p) => {
+  doc.font('Helvetica-Bold').fontSize(11).text(p.title);
+  doc.font('Helvetica').fontSize(10).text(p.tech);
+  doc.font('Helvetica').fontSize(10).text(p.desc, {lineGap: 2});
+  doc.moveDown(0.2);
+});
+
+section('Education');
+data.education.forEach((edu) => {
+  doc.font('Helvetica-Bold').fontSize(11).text(edu.school);
+  doc.font('Helvetica').fontSize(10).text(`${edu.degree}    |    ${edu.years}`);
+  doc.moveDown(0.2);
+});
+
+section('Achievements');
+data.achievements.forEach((a) => {
+  doc.font('Helvetica').fontSize(10).text('• ' + a);
 });
 
 doc.end();
